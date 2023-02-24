@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Random Meal Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+    
+  <body>
+    <h1>Random Meal Generator</h1>
+    <button id="generateBtn">Generate Meals</button>
+    <h2 id="B">Breakfast</h2>
+    <p id="breakfast"></p>
+    <p id="breakfastIngredients"></p>
+    <h2 id="L">Lunch</h2>
+    <p id="lunch"></p>
+    <p id="lunchIngredients"></p>
+    <h2 id="D">Dinner</h2>
+    <p id="dinner"></p>
+    <p id="dinnerIngredients"></p>
+    
+    <script>
+      const breakfastOptions = ["Cereal with milk and sliced banana", "Toast with peanut butter and banana slices", "Yogurt with granola and sliced fruit", "Oatmeal with raisins and brown sugar", "Scrambled eggs with toast and sliced avocado"];
+      const breakfastIngredients = ["Cereal, milk, banana", "Toast, peanut butter, banana", "Yogurt, granola, fruit", "Oatmeal, raisins, brown sugar", "Eggs, toast, avocado"];
+
+      const lunchOptions = ["Turkey and cheese sandwich", "Chicken Caesar salad", "BLT sandwich", "Veggie burger with sweet potato fries", "Grilled cheese with tomato soup"];
+      const lunchIngredients = ["Turkey, cheese, bread", "Chicken, romaine lettuce, croutons, Caesar dressing", "Bacon, lettuce, tomato, bread", "Veggie burger, sweet potato fries", "Cheese, bread, tomato soup"];
+
+      const dinnerOptions = ["Grilled salmon with asparagus", "Spaghetti with meatballs", "Chicken fajitas", "Beef stir-fry with vegetables", "Vegetarian lasagna"];
+      const dinnerIngredients = ["Salmon, asparagus", "Spaghetti, meatballs, tomato sauce", "Chicken, peppers, onions, tortillas", "Beef, vegetables, rice", "Lasagna noodles, tomato sauce, ricotta cheese, spinach"];
+
+      const generateBtn = document.getElementById("generateBtn");
+
+      generateBtn.addEventListener("click", () => {
+        const breakfastIndex = Math.floor(Math.random() * breakfastOptions.length);
+        const lunchIndex = Math.floor(Math.random() * lunchOptions.length);
+        const dinnerIndex = Math.floor(Math.random() * dinnerOptions.length);
+
+        document.getElementById("breakfast").textContent = breakfastOptions[breakfastIndex];
+        document.getElementById("lunch").textContent = lunchOptions[lunchIndex];
+        document.getElementById("dinner").textContent = dinnerOptions[dinnerIndex];
+
+        document.getElementById("breakfastIngredients").textContent = breakfastIngredients[breakfastIndex];
+        document.getElementById("lunchIngredients").textContent = lunchIngredients[lunchIndex];
+        document.getElementById("dinnerIngredients").textContent = dinnerIngredients[dinnerIndex];
+      });
+    </script>
+  </body>
+</html>

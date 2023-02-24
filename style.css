@@ -1,0 +1,64 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set a white background for the page */
+  body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Center the main heading */
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Center the generate button */
+  #generateBtn {
+    display: block;
+    margin: 50px auto;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #generateBtn:hover {
+    background-color: #3E8E41;
+  }
+  
+  /* Center the meal headings */
+
+  
+  /* Center the meal options and ingredients */
+  p {
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+  #B, #L, #D {
+    text-align: center;
+    margin-top: 50px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    /* constrain to specified size */
+    max-width: 500px;
+    margin: 0 auto;
+    /* border shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* hide border shado left right and top */
+    border-radius: 10px;
+    /* hide border shadow bottom */
+    overflow: hidden;
+
+  }
+
